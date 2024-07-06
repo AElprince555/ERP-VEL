@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\System\ApplicationSeeder;
+use Database\Seeders\System\ModuleSeeder;
+use Database\Seeders\System\SubModuleSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,8 +19,14 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'ERP-VEL',
+            'email' => 'admin@erp-vel.com',
+            'password' => '01011263555'
+        ]);
+        $this->call([
+            ModuleSeeder::class,
+            SubModuleSeeder::class,
+            ApplicationSeeder::class,
         ]);
     }
 }
