@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\General\World\CountrySeeder;
 use Database\Seeders\System\ApplicationSeeder;
 use Database\Seeders\System\ModuleSeeder;
 use Database\Seeders\System\SubModuleSeeder;
@@ -27,6 +28,7 @@ class DatabaseSeeder extends Seeder
             ModuleSeeder::class,
             SubModuleSeeder::class,
             ApplicationSeeder::class,
+            CountrySeeder::class,
         ]);
     }
 }

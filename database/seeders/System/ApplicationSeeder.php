@@ -51,7 +51,7 @@ class ApplicationSeeder extends Seeder
                 'code' => $generalModule->code . '-WO-COU',
                 'short' => $generalModule->short . '.world.countries',
                 'path' => $generalModule->path . '/world/countries',
-                'model' => 'App\Models\World\Country',
+                'model' => 'App\Models\General\World\Country',
                 'view' => null,
                 'controller' => null,
                 'sub_module_id' => $worldSubModule->id,

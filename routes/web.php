@@ -18,6 +18,9 @@ try {
                 return view('pages.subModules', ['subModule' => $subModule]);
             } )->name($subModule->short);
         }
+        Route::get('/countries',function (){
+            return view('pages.countries' , ['model'=>\App\Models\Application::firstWhere('name','countries')->model]);
+        });
         foreach ($apps as $application) {
             Route::get(str_replace('.','/',$application->path) ,function () use ($application) {
                 return view('pages.'.$application->view, ['application' => $application]);
