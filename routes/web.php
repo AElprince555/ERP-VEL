@@ -28,12 +28,11 @@ try {
             }
             )->name($application->short);
         }
-        /*        foreach ($apps as $application) {
-                    Route::get(str_replace('.', '/', $application->path),
-                        ($application->controller) ? (new
-                    $application->controller)::class : (new App\Livewire\Layout\DynamicTable\Index)::class
-                    )->name($application->short);
-                }*/
+        foreach ($methods as $method) {
+            Route::get(str_replace('.', '/', $method->path), function () use ($method) {
+                return view('pages.methods', ['method' => $method]);
+            })->name($method->short);
+        }
 
     });
 } catch (Exception $ex) {

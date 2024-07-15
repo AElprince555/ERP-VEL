@@ -1,7 +1,18 @@
 <div>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create Country') }}
-        </h2>
-    </x-slot>
+    <x-primary-button
+        x-data=""
+        x-on:click.prevent="$dispatch('open-modal', 'create-country')"
+    >
+        {{__(strtoupper('add country'))}}
+    </x-primary-button>
+    <x-modal
+        name="create-country"
+        :show="$errors->isNotEmpty()"
+        focusable
+    >
+        <div class="p-6">
+            <livewire:pages.general.world.countries.form />
+        </div>
+
+    </x-modal>
 </div>
