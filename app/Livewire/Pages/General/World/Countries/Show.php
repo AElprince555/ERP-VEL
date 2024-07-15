@@ -4,7 +4,8 @@ namespace App\Livewire\Pages\General\World\Countries;
 
 use Livewire\Component;
 
-class Show extends Component{
+class Show extends Component
+{
     public function render()
     {
         return view('livewire.pages.general.world.countries.show');

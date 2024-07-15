@@ -6,12 +6,13 @@ use App\Models\General\World\State;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class StatePolicy{
+class StatePolicy
+{
     use HandlesAuthorization;
 
     public function viewAny(User $user): bool
     {
-        //
+
     }
 
     public function view(User $user, State $state): bool

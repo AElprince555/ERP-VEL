@@ -6,12 +6,13 @@ use App\Models\General\World\City;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class CityPolicy{
+class CityPolicy
+{
     use HandlesAuthorization;
 
     public function viewAny(User $user): bool
     {
-        //
+
     }
 
     public function view(User $user, City $city): bool

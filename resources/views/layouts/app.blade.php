@@ -12,9 +12,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
     <!-- Scripts -->
-    @livewireStyles
+    <script defer src="https://unpkg.com/@alpinejs/ui@3.13.7-beta.0/dist/cdn.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @livewireStyles
 </head>
 <body class="font-sans antialiased" x-data="" @keydown.ctrl.alt.n="$dispatch('open-modal', 'nav-modal')">
 <div class="min-h-screen bg-gray-100">
